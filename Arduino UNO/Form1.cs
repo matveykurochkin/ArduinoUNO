@@ -6,8 +6,10 @@ namespace Arduino_UNO
 {
     public partial class Form1 : Form
     {
+        const byte TURN_ON_COMMAND = 1;
+        const byte TURN_OFF_COMMAND = 0;
+
         bool isConnected = false;
-        int a = 6;
         public Form1()
         {
             InitializeComponent();
@@ -55,7 +57,7 @@ namespace Arduino_UNO
                 MessageBox.Show("COM PORT not found");
             }
             foreach (string portName in portnames)
-            {           
+            {
                 comboBox1.Items.Add(portName);
                 Console.WriteLine(portnames.Length);
                 if (portnames[0] != null)
@@ -67,30 +69,42 @@ namespace Arduino_UNO
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (serialPort1.IsOpen) 
+            if (serialPort1.IsOpen)
                 serialPort1.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void ButtonUpload_Click(object sender, EventArgs e)
         {
-          
-            string red =  textBox1.Text;
-            string green = textBox2.Text;
-            string blue = textBox3.Text;
-            string[] arr = new string[] {red,green,blue };
+            if (!byte.TryParse(textBox1.Text, out var red))
+            {
+                MessageBox.Show("error");
+                return;
+
+            }
+            if (!byte.TryParse(textBox2.Text, out var green))
+            {
+                MessageBox.Show("error");
+                return;
+
+            }
+            if (!byte.TryParse(textBox3.Text, out var blue))
+            {
+                MessageBox.Show("error");
+                return;
+
+            }
+
+            byte[] arr = new byte[] { TURN_ON_COMMAND, red, green, blue };
+
             if (isConnected)
             {
-                serialPort1.WriteLine("1");
-                for (int i = 0; i<3;i++)
-                {
-                    serialPort1.WriteLine(arr[i]);
-                }
+                serialPort1.Write(arr, 0, arr.Length);
             }
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        // ctrl + k + d
+        private void ButtonOff_Click(object sender, EventArgs e)
         {
-            serialPort1.Write("0");
+            serialPort1.Write(new byte[] { TURN_OFF_COMMAND },0,1);
         }
 
     }

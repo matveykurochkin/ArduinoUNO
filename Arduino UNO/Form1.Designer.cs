@@ -39,8 +39,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.ButtonUpload = new System.Windows.Forms.Button();
+            this.ButtonOff = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -97,7 +97,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(128, 26);
+            this.textBox3.Size = new System.Drawing.Size(129, 26);
             this.textBox3.TabIndex = 5;
             // 
             // button1
@@ -133,35 +133,35 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // ButtonUpload
             // 
-            this.button3.Location = new System.Drawing.Point(14, 211);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 29);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Загрузить ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.ButtonUpload.Location = new System.Drawing.Point(14, 211);
+            this.ButtonUpload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ButtonUpload.Name = "ButtonUpload";
+            this.ButtonUpload.Size = new System.Drawing.Size(179, 29);
+            this.ButtonUpload.TabIndex = 10;
+            this.ButtonUpload.Text = "Загрузить ";
+            this.ButtonUpload.UseVisualStyleBackColor = true;
+            this.ButtonUpload.Click += new System.EventHandler(this.ButtonUpload_Click);
             // 
-            // button4
+            // ButtonOff
             // 
-            this.button4.Location = new System.Drawing.Point(14, 244);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(179, 29);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Выключить ";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.ButtonOff.Location = new System.Drawing.Point(14, 244);
+            this.ButtonOff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ButtonOff.Name = "ButtonOff";
+            this.ButtonOff.Size = new System.Drawing.Size(179, 29);
+            this.ButtonOff.TabIndex = 11;
+            this.ButtonOff.Text = "Выключить ";
+            this.ButtonOff.UseVisualStyleBackColor = true;
+            this.ButtonOff.Click += new System.EventHandler(this.ButtonOff_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(204, 284);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.ButtonOff);
+            this.Controls.Add(this.ButtonUpload);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
@@ -192,8 +192,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button ButtonUpload;
+        private System.Windows.Forms.Button ButtonOff;
     }
 }
 
