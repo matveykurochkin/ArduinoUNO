@@ -41,6 +41,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.ButtonUpload = new System.Windows.Forms.Button();
             this.ButtonOff = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(-2, 145);
+            this.label2.Location = new System.Drawing.Point(10, 145);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 19);
@@ -75,29 +76,29 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(64, 108);
+            this.textBox1.Location = new System.Drawing.Point(78, 108);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 26);
+            this.textBox1.Size = new System.Drawing.Size(136, 26);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(65, 142);
+            this.textBox2.Location = new System.Drawing.Point(78, 142);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 26);
+            this.textBox2.Size = new System.Drawing.Size(136, 26);
             this.textBox2.TabIndex = 4;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(64, 179);
+            this.textBox3.Location = new System.Drawing.Point(78, 179);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(129, 26);
+            this.textBox3.Size = new System.Drawing.Size(136, 26);
             this.textBox3.TabIndex = 5;
             // 
             // button1
@@ -106,7 +107,7 @@
             this.button1.Location = new System.Drawing.Point(15, 71);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 29);
+            this.button1.Size = new System.Drawing.Size(199, 29);
             this.button1.TabIndex = 6;
             this.button1.Text = "Подключение";
             this.button1.UseVisualStyleBackColor = true;
@@ -118,7 +119,7 @@
             this.comboBox1.Location = new System.Drawing.Point(14, 41);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(178, 27);
+            this.comboBox1.Size = new System.Drawing.Size(201, 27);
             this.comboBox1.TabIndex = 7;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -127,7 +128,7 @@
             this.button2.Location = new System.Drawing.Point(14, 8);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 29);
+            this.button2.Size = new System.Drawing.Size(201, 29);
             this.button2.TabIndex = 9;
             this.button2.Text = "Выбор порта";
             this.button2.UseVisualStyleBackColor = true;
@@ -138,7 +139,7 @@
             this.ButtonUpload.Location = new System.Drawing.Point(14, 211);
             this.ButtonUpload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ButtonUpload.Name = "ButtonUpload";
-            this.ButtonUpload.Size = new System.Drawing.Size(179, 29);
+            this.ButtonUpload.Size = new System.Drawing.Size(200, 29);
             this.ButtonUpload.TabIndex = 10;
             this.ButtonUpload.Text = "Загрузить ";
             this.ButtonUpload.UseVisualStyleBackColor = true;
@@ -149,7 +150,7 @@
             this.ButtonOff.Location = new System.Drawing.Point(14, 244);
             this.ButtonOff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ButtonOff.Name = "ButtonOff";
-            this.ButtonOff.Size = new System.Drawing.Size(179, 29);
+            this.ButtonOff.Size = new System.Drawing.Size(200, 29);
             this.ButtonOff.TabIndex = 11;
             this.ButtonOff.Text = "Выключить ";
             this.ButtonOff.UseVisualStyleBackColor = true;
@@ -159,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(204, 284);
+            this.ClientSize = new System.Drawing.Size(227, 286);
             this.Controls.Add(this.ButtonOff);
             this.Controls.Add(this.ButtonUpload);
             this.Controls.Add(this.button2);
@@ -194,6 +195,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button ButtonUpload;
         private System.Windows.Forms.Button ButtonOff;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 

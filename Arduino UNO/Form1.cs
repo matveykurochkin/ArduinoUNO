@@ -75,26 +75,33 @@ namespace Arduino_UNO
 
         private void ButtonUpload_Click(object sender, EventArgs e)
         {
-            if (!byte.TryParse(textBox1.Text, out var red))
+            var dialogResult = colorDialog1.ShowDialog();
+            if (dialogResult != DialogResult.OK)
             {
-                MessageBox.Show("error");
                 return;
-
-            }
-            if (!byte.TryParse(textBox2.Text, out var green))
-            {
-                MessageBox.Show("error");
-                return;
-
-            }
-            if (!byte.TryParse(textBox3.Text, out var blue))
-            {
-                MessageBox.Show("error");
-                return;
-
             }
 
-            byte[] arr = new byte[] { TURN_ON_COMMAND, red, green, blue };
+
+            //if (!byte.TryParse(textBox1.Text, out var red))
+            //{
+            //    MessageBox.Show("error");
+            //    return;
+
+            //}
+            //if (!byte.TryParse(textBox2.Text, out var green))
+            //{
+            //    MessageBox.Show("error");
+            //    return;
+
+            //}
+            //if (!byte.TryParse(textBox3.Text, out var blue))
+            //{
+            //    MessageBox.Show("error");
+            //    return;
+
+            //}
+
+            var arr = new byte[] { TURN_ON_COMMAND, colorDialog1.Color.R, colorDialog1.Color.G, colorDialog1.Color.B };
 
             if (isConnected)
             {
