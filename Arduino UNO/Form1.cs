@@ -7,6 +7,7 @@ namespace Arduino_UNO
     public partial class Form1 : Form
     {
         bool isConnected = false;
+        int a = 6;
         public Form1()
         {
             InitializeComponent();
