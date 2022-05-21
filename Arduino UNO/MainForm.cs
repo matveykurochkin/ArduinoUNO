@@ -65,7 +65,7 @@ namespace Arduino_UNO
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this, $"Ошибка подключения: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, $"Ошибка подключения: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void disconnectFromArduino()
@@ -104,9 +104,7 @@ namespace Arduino_UNO
 
             if (dialogResult != DialogResult.OK)
             {
-                MessageBox.Show("Цвет не был выбран.",
-                    "Error",
-                    MessageBoxButtons.OK);
+                MessageBox.Show(this, "Цвет не был выбран.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else
